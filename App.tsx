@@ -35,7 +35,6 @@ export default function App() {
           color: 'gray'
         }}
         placeholder="Quoi de neuf ?"
-        //@ts-ignore remove this before submitting
         onChangeText={text => setText(text)}
         value={text}
         />
