@@ -14,7 +14,10 @@ export default function Publication(props: PublicationProps) {
                 source={{
                     uri: props.imageURL
                 }}
-                style={{ width: 200, height: 200 }}
+                style={{ 
+                    width: 200, 
+                    height: 200
+                }}
             />
         </View>
     );

@@ -15,13 +15,14 @@ export default function App() {
   const [posts, setPosts] = useState([] as Post[]);
 
   const publier = () => {
-    // fetch("https://api.github.com/users/defunkt")
-    // .then(data=>data.json())
-    // .then(data=>setImageURL(JSON.stringify(data)))
-    setPosts([{
+    
+    fetch("https://cors-anywhere.herokuapp.com/https://coffee.alexflipnote.dev/random.json")
+    .then(data=>data.json())
+    .then(data=>
+      setPosts([{
       text,
-      imageURL: "https://coffee.alexflipnote.dev/JhqaHeCqL_c_coffee.png"
-    }, ...posts]);
+      imageURL: data.file
+    }, ...posts]));
 
     setText("");
 
